@@ -31,6 +31,14 @@ pipeline {
                 input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" melanjutkan eksekusi pipeline ke tahap Deploy)' 
             }
         }
+        
+        stage('Deploy') { 
+            steps {
+                sleep(time: 1, unit: 'MINUTES')
+            }
+        }
+
+
 
     }
 }
