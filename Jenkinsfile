@@ -38,14 +38,7 @@ pipeline {
                     image 'cdrx/pyinstaller-linux:python3'
                 }
             }
-            steps {
-                sh 'pyinstaller --onefile sources/add2vals.py'
-            }
-            post {
-                success {
-                    archiveArtifacts 'dist/add2vals'
-                }
-            }
+
         }
 
 
