@@ -33,6 +33,11 @@ pipeline {
         }
         
         stage('Deploy') { 
+            agent {
+                docker {
+                    image 'cdrx/pyinstaller-linux:python2'
+                }
+            }
             steps {
                 sleep(time: 1, unit: 'MINUTES')
             }
